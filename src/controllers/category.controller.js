@@ -1,8 +1,8 @@
 import mysql from "mysql";
-import { config } from "../mysql_connector.js";
+import { dbConfig } from "../db_config.js";
 
 export const getCategories = (req, res) => {
-  const pool = mysql.createPool(config);
+  const pool = mysql.createPool(dbConfig);
   pool.getConnection((err, connection) => {
     if (err) throw err;
     connection.query("SELECT * FROM bsale_test.category", (error, results) => {

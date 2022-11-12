@@ -11,4 +11,6 @@ app.use(productRoutes);
 app.use(categoryRoutes);
 
 const PORT = process.env.PORT || 3000;
-app.listen(PORT);
+app.listen(PORT, (req, res) => {
+  res.send("API de BSale Test");
+});

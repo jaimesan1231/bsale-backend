@@ -10,7 +10,7 @@ export const getProducts = (req, res) => {
       if (results.length > 0) {
         res.json(results);
       } else {
-        res.send("no hay resutlados");
+        res.send("no hay resultados");
       }
       connection.release();
     });

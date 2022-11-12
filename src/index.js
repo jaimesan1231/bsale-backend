@@ -10,7 +10,10 @@ app.use(cors());
 app.use(productRoutes);
 app.use(categoryRoutes);
 
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, (req, res) => {
+//Pagina inicio
+app.get("/", (req, res) => {
   res.send("API de BSale Test");
 });
+
+const PORT = process.env.PORT || 3000;
+app.listen(PORT);
